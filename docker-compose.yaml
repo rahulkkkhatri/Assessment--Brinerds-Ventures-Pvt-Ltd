@@ -1,16 +1,12 @@
 version : ‘3.1’
 services:
-    servicename:
-        build:
-            context: .
-            dockerfile : test-dockerfile
-        image:
-        command:
-        environment:
+    Test_app_service:
+        image: docker0rahul/test_processdata:latest
         volumes:
-        ports:
-        depends_on:
+          - ./test/datasets/:/usr/app/src/datasets/
+     App_service:
+        image: docker0rahul/processdata:latest
+        volumes:
+          - ./dataset/:/usr/app/src/dataset/
+        
 
-volumes:
-
-networks:
