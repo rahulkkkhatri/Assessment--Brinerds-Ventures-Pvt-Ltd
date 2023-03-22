@@ -12,6 +12,7 @@ WORKDIR /usr/app/src
 COPY processdata.py ./
 # Now the structure looks like this '/usr/app/src/test.py'
 RUN mkdir -p datasets/
+COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
 #CMD instruction should be used to run the software
