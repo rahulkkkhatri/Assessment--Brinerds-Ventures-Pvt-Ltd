@@ -43,6 +43,9 @@ jobs:
       - name: Build and push
         run: |
           ls
+          
+          docker image build -t docker0rahul/processdata:latest .
+          docker image push docker0rahul/processdata:latest
           cd test/
           docker image build -t docker0rahul/test_processdata:latest .
           docker image push docker0rahul/test_processdata:latest
