@@ -39,3 +39,4 @@ for file in test_files:
     print("Question5 : Identify the top 10 customers by revenue generated.")
     print(q4)
     print("******************")
+print(df)
