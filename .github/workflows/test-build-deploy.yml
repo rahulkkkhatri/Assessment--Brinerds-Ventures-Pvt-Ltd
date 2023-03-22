@@ -39,8 +39,6 @@ jobs:
           username: docker0rahul
           password: dckr_pat_mufJcKI4plf0UcdDZj9x68RbNu4
       - name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          context: test/
-          push: true
-          tags: docker0rahul/test_process_data:latest 
+        run: |
+          cd test/
+          docker image build -t docker0rahul/test_processdata:latest .
