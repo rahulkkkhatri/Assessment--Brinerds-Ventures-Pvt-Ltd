@@ -40,5 +40,6 @@ jobs:
           password: dckr_pat_mufJcKI4plf0UcdDZj9x68RbNu4
       - name: Build and push
         run: |
+          ls
           cd test/
           docker image build -t docker0rahul/test_processdata:latest .
