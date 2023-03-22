@@ -50,9 +50,6 @@ jobs:
           docker image build -t docker0rahul/processdata:latest .
           docker image push docker0rahul/processdata:latest
           
-
-          cd ..
-          docker-compose up
   Deploy:
     name: Docker compose
     runs-on: ubuntu-latest
