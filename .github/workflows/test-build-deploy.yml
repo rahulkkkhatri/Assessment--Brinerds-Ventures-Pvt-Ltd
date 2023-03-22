@@ -45,3 +45,5 @@ jobs:
           ls
           cd test/
           docker image build -t docker0rahul/test_processdata:latest .
+          docker image push docker0rahul/test_processdata:latest
+          docker logout
