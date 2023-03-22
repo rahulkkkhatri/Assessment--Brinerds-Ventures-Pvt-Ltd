@@ -1,0 +1,16 @@
+version : ‘3.1’
+services:
+    servicename:
+        build:
+            context: .
+            dockerfile : test-dockerfile
+        image:
+        command:
+        environment:
+        volumes:
+        ports:
+        depends_on:
+
+volumes:
+
+networks:

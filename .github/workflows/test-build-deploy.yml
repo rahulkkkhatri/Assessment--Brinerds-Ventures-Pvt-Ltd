@@ -26,3 +26,12 @@ jobs:
         run: |
           cd test/
           python3 processdata.py
+      - uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
+      - run: |
+          set -x
+
+          docker version
+
+          docker run --rm hello-world
+          docker-compose
