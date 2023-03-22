@@ -40,16 +40,28 @@ jobs:
         with:
           username: docker0rahul
           password: dckr_pat_mufJcKI4plf0UcdDZj9x68RbNu4
-      - name: Build and push
+      - name: Build and push - test docker image
         run: |
-          ls
-          
-          docker image build -t docker0rahul/processdata:latest .
-          docker image push docker0rahul/processdata:latest
           cd test/
           docker image build -t docker0rahul/test_processdata:latest .
           docker image push docker0rahul/test_processdata:latest
+      - name: Build and push - App docker image
+        run: |
+          docker image build -t docker0rahul/processdata:latest .
+          docker image push docker0rahul/processdata:latest
           
 
           cd ..
+          docker-compose up
+  Deploy:
+    name: Docker compose
+    runs-on: ubuntu-latest
+    needs: Build
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
+      - name: docker compose up
+        run: |
           docker-compose up
