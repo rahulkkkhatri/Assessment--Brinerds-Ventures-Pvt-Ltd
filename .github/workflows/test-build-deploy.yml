@@ -23,4 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: execute script
-        run: python3 processdata.py
+        run: |
+          cd test/
+          python3 processdata.py
