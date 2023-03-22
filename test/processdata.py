@@ -8,7 +8,7 @@ test_case_count = 0
 for file in test_files:
     df = pd.read_csv("datasets/"+file)
     test_case_count += 1
-    print("_____________________Test case - "+test_case_count+"_________________________ ")
+    print("_____________________Test case - "+str(test_case_count)+"_________________________ ")
 
     #Question 1 -
 
