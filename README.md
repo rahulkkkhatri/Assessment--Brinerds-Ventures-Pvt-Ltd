@@ -52,7 +52,7 @@ There are 2 services :
 ## Continuous Deployment with GitHub Action
 
 workflow file - `.github/workflows/test-build-deploy.yml`.
-
+![Workflow](images/workflow.png)
 Workflow:</br>
 - UnitTest:
     - Checkout repository
@@ -73,7 +73,13 @@ Workflow:</br>
     - Upload results artifact
 
 ## Check Results
-- Check the test cases
+- Check the test cases and application results in pipeline logs. Path : GitHub Repository -> Actions -> latest executing/executed workflow -> Go to Docker compose Job -> Check logs of docker compose up step.
+![Check Logs](images/check_results.png)
+
+- Alternatively, you can also download the artifact and check the results in the artifact file.
+![artifact](images/artifact.png)
+
+
 
 
 
