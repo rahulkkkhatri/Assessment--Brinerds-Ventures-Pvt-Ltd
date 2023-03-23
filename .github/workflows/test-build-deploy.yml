@@ -63,4 +63,8 @@ jobs:
         timeout-minutes: 12
       - name: docker compose up
         run: |
-          docker-compose up
+          docker-compose up | tee results.txt
+      - name: Upload result artifact
+        with:
+          name: Results
+          path: results.txt
