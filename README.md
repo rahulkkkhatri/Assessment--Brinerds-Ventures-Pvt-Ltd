@@ -53,24 +53,27 @@ There are 2 services :
 
 workflow file - `.github/workflows/test-build-deploy.yml`.
 
-Workflow:
-    - UnitTest:
-        - Checkout repository
-        - Setup Python
-        - Install depedencies
-        - Execute test script
-    - Build:
-        - Checkout repository
-        - Install Docker
-        - Login to Docker Registry
-        - Build & Push docker image for testing application
-        - Build & Push application docker image
-        - Logout docker registry
-    - Deploy:
-        - Checkout repository
-        - Install Docker
-        - Docker compose up
-        - Upload results artifacts.
+Workflow:</br>
+- UnitTest:
+    - Checkout repository
+    - Setup Python
+    - Install depedencies
+    - Execute test script
+- Build:
+    - Checkout repository
+    - Install Docker
+    - Login to Docker Registry
+    - Build & Push docker image for testing application
+    - Build & Push application docker image
+    - Logout docker registry
+- Deploy:
+    - Checkout repository
+    - Install Docker
+    - Docker compose up
+    - Upload results artifact
+
+## Check Results
+- Check the test cases
 
 
 
