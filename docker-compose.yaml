@@ -6,6 +6,7 @@ services:
           - ./test/datasets/:/usr/app/src/datasets/
     App_service:
         image: docker0rahul/processdata:latest
+        depends_on: Test_app_service
         volumes:
           - ./dataset/:/usr/app/src/dataset/
         
