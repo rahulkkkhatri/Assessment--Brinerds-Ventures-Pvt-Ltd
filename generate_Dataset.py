@@ -84,7 +84,7 @@ for file in files:
 
 f1 = open("order.csv",'a')
 f1.write("order_id,customer_id,order_date,product_id,product_name,product_price,quantity")
-for i in range(1,1000000):
+for i in range(1,1000001):
     order_id = ''.join(random.choices(string.ascii_lowercase +
                             string.digits, k=7))
     num = random.randint(0,len(Customer_id)-1)

@@ -10,7 +10,7 @@ WORKDIR /usr/app/src
 
 #to COPY the remote file at working directory in container
 COPY processdata.py ./
-# Now the structure looks like this '/usr/app/src/test.py'
+# Now the structure looks like this '/usr/app/src/processdata.py'
 RUN mkdir -p datasets/
 COPY requirements.txt ./
 RUN pip install -r requirements.txt

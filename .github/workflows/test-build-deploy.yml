@@ -65,6 +65,7 @@ jobs:
         run: |
           docker-compose up | tee results.txt
       - name: Upload result artifact
+        uses: actions/upload-artifact@v3
         with:
           name: Results
           path: results.txt

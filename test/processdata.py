@@ -36,7 +36,7 @@ for file in test_files:
     # Question 4-
     # Groups by customer id -> apply sum for all groups -> sort groups based on total revenue -> select first 10 groups
     q4 = df.groupby(df.customer_id)['total_price'].sum().sort_values(ascending=False).head(10)
-    print("Question5 : Identify the top 10 customers by revenue generated.")
+    print("Question4 : Identify the top 10 customers by revenue generated.")
     print(q4)
     print("******************")
 print(df)
